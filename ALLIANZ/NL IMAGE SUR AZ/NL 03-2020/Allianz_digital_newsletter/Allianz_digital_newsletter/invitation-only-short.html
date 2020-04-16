@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <meta charset="utf-8">
+  <!-- utf-8 works for most cases -->
+  <meta name="viewport" content="width=device-width">
+  <!-- Forcing initial-scale shouldn't be necessary -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Use the latest (edge) version of IE rendering engine -->
+  <meta name="x-apple-disable-message-reformatting">
+  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+  <title></title>
+  <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+  <!-- Web Font / @font-face : BEGIN -->
+  <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+
+  <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+  <!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+
+  <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+  <!--[if !mso]><!-->
+  <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+  <!--<![endif]-->
+
+  <!-- Web Font / @font-face : END -->
+
+  <!-- CSS Reset : BEGIN -->
+  <style>
+    /* What it does: Remove spaces around the email design added by some email clients. */
+
+    /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+
+    html,
+    body, {
+      margin: 0 auto !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+      font-family: 'Arial', sans-serif !important;
+    }
+    a,li,p,span,b,strong{
+      font-family: 'Arial', sans-serif !important;
+    }
+    /* What it does: Stops email clients resizing small text. */
+    img {
+      image-rendering: auto;
+      image-rendering: crisp-edges;
+      image-rendering: pixelated;
+    }
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* What it does: Centers email on Android 4.4 */
+
+    div[style*="margin: 16px 0"] {
+      margin: 0 !important;
+    }
+
+    /* What it does: Stops Outlook from adding extra spacing to tables. */
+
+    table,
+    td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+
+    /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      margin: 0 auto !important;
+    }
+
+    table table table {
+      table-layout: auto;
+    }
+
+    /* What it does: Uses a better rendering method when resizing images in IE. */
+
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+
+    /* What it does: A work-around for email clients meddling in triggered links. */
+
+    *[x-apple-data-detectors],
+    /* iOS */
+
+    .x-gmail-data-detectors,
+    /* Gmail */
+
+    .x-gmail-data-detectors *,
+    .aBn {
+      border-bottom: 0 !important;
+      cursor: default !important;
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+
+    .a6S {
+      display: none !important;
+      opacity: 0.01 !important;
+    }
+
+    /* If the above doesn't work, add a .g-img class to any image in question. */
+
+    img.g-img+div {
+      display: none !important;
+    }
+
+    /* What it does: Prevents underlining the button text in Windows 10 */
+
+    .button-link {
+      text-decoration: none !important;
+    }
+    .mobile-visible {
+      display:none;
+      visibility: hidden;
+    }
+    /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+
+    /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+    /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+
+    @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+      /* iPhone 6 and 6+ */
+      .email-container {
+        min-width: 375px !important;
+      }
+    }
+  </style>
+  <!-- CSS Reset : END -->
+
+  <!-- Progressive Enhancements : BEGIN -->
+  <style>
+    /* What it does: Hover styles for buttons */
+
+    .button-td,
+    .button-a {
+      transition: all 100ms ease-in;
+      white-space: nowrap;
+    }
+
+    .white-button:hover {
+      background: #ffffff;
+    }
+
+    .button-td:hover,
+    .button-a:hover {
+      background: #006192;
+      border-color: #006192;
+    }
+
+    /* Media Queries */
+
+    a {
+      text-decoration: none !important;
+      vertical-align: bottom;
+    }
+
+    img.no-align {
+      vertical-align: 0 !important;
+    }
+    .product-two-columns-full p {
+        margin-top: 0px !important;
+        margin-bottom:15px !important;
+      }
+
+    a img {
+      vertical-align: middle;
+    }
+   /* .mobile-visible{
+        display:none !important;
+        visibility: hidden !important;
+        mso-hide:all;
+        max-height:0;
+   
+   } */
+    @media screen and (max-width: 600px) {
+      .table-button {
+        width: auto !important;
+      }
+      .email-container {
+        width: 100% !important;
+        margin: auto !important;
+      }
+
+      /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+      .fluid {
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      /* What it does: Forces table cells into full-width rows. */
+      .stack-column,
+      .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+      /* And center justify these ones. */
+      .stack-column-center {
+        text-align: center !important;
+      }
+
+      /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+      .center-on-narrow {
+        text-align: center !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+      }
+      table.center-on-narrow {
+        display: inline-block !important;
+      }
+
+
+      /* What it does: Adjust typography on small screens to improve readability */
+      .email-container p {
+        font-size: 16px !important;
+        line-height: 22px !important;
+      }
+    }
+
+    .padding {
+      padding: 20px 20px 16px 20px;
+    }
+
+    .col-1 {
+      text-align: left;
+      width: 114px;
+    }
+
+    .col-4 {
+      margin: 0 auto;
+      text-align: left;
+      width: 177.33px
+    }
+
+    .col-6 {
+      text-align: left;
+      width: 274px;
+    }
+
+    .col-8 {
+
+      text-align: left;
+      width: 370.67px
+    }
+
+    .product-module img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    .col-1 .full {
+      height: 184px;
+    }
+   .price-eur{
+     text-align: left;
+   }
+    @media screen and (max-width: 590px) {
+      .stage-A .hide-mobile-all, .stage-1B .hide-mobile-all {
+    display: none !important;
+   max-height:0px !important;
+   overflow:hidden !important;
+   mso-hide:all;
+}
+
+      .tr-full-img .space-mobile-40, .tr-two-column .space-mobile-40{
+        margin-top: 3px !important;
+      }
+
+      .teaser-light-bg .space-mobile-40, .teaser-dark-bg .space-mobile-40, 
+      .teaser-freestanding .space-mobile-40 {
+              margin-top: 25px!important;
+      }
+
+
+      .purple-icons .space-mobile-40, .yellow-icon .space-mobile-40,
+      .stage-50-teaser .space-mobile-40{
+        margin-top:13px !important;
+      }
+      .product-two-columns-full a{
+        display: block;
+        margin-bottom: 40px;
+      }
+  
+      .latest-products .on-mobile-full p{
+        margin-left: 0px !important;
+      }
+      .icons-price-models {
+        border-bottom: 1px solid #ccc; 
+      }
+      .product-module-1 img{
+        margin-left:0px !important;
+        
+      }
+      .stack-column-center{
+        padding-left:0px !important;
+        padding-right: 0px !important;
+      }
+      .price-eur{
+     text-align: left !important;
+   }
+      p.headline-35{
+        font-size:35px !important;
+        line-height: 41px !important;
+      }
+      .price-model p.price-35{
+        margin-top: 25px !important;
+      }
+      p.headline-26{
+        font-size:26px !important;
+        line-height: 32px !important;
+      }
+      .no-padding-all-lr{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+      }
+      .dark-tease-50 a{
+        padding-left: 0px !important;
+      }
+      .footer-bottom p{
+          text-align: center !important;
+      }
+      .footer-bottom b {
+          display: block !important;
+          margin-bottom: 20px !important; 
+      }
+      .mobile-line-height {
+        line-height: 30px !important;
+      }
+      .bottom-end{
+        margin-bottom: 30px !important;
+        margin-top: 40px;
+        text-align: center !important;
+      }
+      .bottom-end p, .bottom-end strong {
+        font-size: 16px !important;
+      }
+      .mobile-visible { 
+        display: block !important;
+        text-align: center !important;
+        margin-top:50px !important;
+        margin-bottom:40px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        visibility: visible !important;
+      }
+      .bottom-end a {
+        padding-left:0px !important;
+      }
+    
+      .price-big-letter a {
+        margin-left: 0px !important;
+      }
+      .price-big-letter .big-letter{
+        margin-right: 0px !important;
+      }
+      .center-on-mobile {
+        margin-left: 64px !important;
+      }
+      .price-big-letter {
+        padding-left: 0px !important;
+      }
+    
+      .padding-mobile-16 {
+        padding-left: 20px !important;
+      }
+      .mobile-no-padding {
+        padding: 0px !important;
+      }
+      .mobile-center {
+        text-align: center !important;
+      }
+      .teaser-light-bg .table-button,
+      .teaser-dark-bg .table-button,
+      .teaser-freestanding .table-button,
+      .three-columns .table-button,
+      .stage-50-teaser .table-button,
+      .image-BTN .table-button {
+        margin-left: 16px !important;
+        width: 92% !important;
+      }
+      .on-mobile-full p,
+      .teaser-dark-bg p,
+      .teaser-freestanding p,
+      .teaser-light-bg p,
+      .stage-1B p.mobile-35 {
+        margin-left: 0px !important;
+
+      }
+      .stage-1B .table-button {
+        margin-left: 0px !important;
+      }
+      .stage-1B p.mobile-35 {
+        padding-left: 0px !important;
+      }
+      .mobile-bottom-margin {
+        margin-bottom: 40px !important;
+      }
+      .table-button {
+        width: 100% !important;
+      }
+      .no-align {
+        vertical-align: none !important;
+      }
+      .full {
+        height: auto !important;
+      }
+      .padding-bottom-mobile {
+        height: auto !important;
+      }
+      .stage-A p.mobile-35,
+      .stage-1B p.mobile-35 {
+        font-size: 35px !important;
+        line-height: 41px !important;
+        margin-left: 0px !important;
+      }
+      .mobile-left-align {
+        text-align: left !important;
+      }
+      .stage-A p {
+        padding-left: 0px !important;
+      }
+      .stage-A .table-button {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+      }
+      .product-two-columns-full td {
+        height: auto !important;
+      }
+      .product-two-columns-full img {
+        height: auto !important;
+      }
+      .copy-left .headline {
+        margin-top: 20px;
+      }
+      table {
+        width: 100% !important;
+      }
+
+      .teaser-dark-bg .g-img {
+        height: auto !important;
+      }
+      .teaser-light-bg .table-button,
+      .teaser-dark-bg .table-button,
+      .teaser-freestanding .table-button,
+      .padding-on-mobile-btn .table-button {
+        margin-left: 16px !important;
+      }
+      .teaser-freestanding .padding-on-mobile,
+      .padding-on-mobile-btn {
+        padding-bottom: 125px !important;
+      }
+      .stage-1B .padding-on-mobile-btn {
+        padding-bottom: 80px !important;
+      }
+      .padding-on-mobile {
+        padding-left: 16px !important;
+      }
+      .three-columns-icons img {
+        margin-top: 0px !important;
+      }
+      p.on-mobile-big-letter {
+        font-size: 67px !important;
+        line-height: 67px !important;
+        float: none !important;
+      }
+      .no-padding-top-bottom {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+      }
+      .cutout .g-img {
+        display: block !important;
+        width: auto !important;
+      }
+      .copy-left,
+      .copy-center {
+        padding: 40px 20px !important;
+      }
+      .g-img {
+        max-width: 100% !important;
+      }
+      .price-big-letter p.big-letter {
+        font-size: 67px !important;
+        margin-top: 27px !important;
+        padding-left:0px !important;
+        padding-right: 0px !important;
+      }
+      .price-big-letter .price-eur {
+        display: block;
+        text-align: right;
+        width: 250px;
+        padding-left:7px !important;
+        margin-top: 10px !important;
+      }
+      .price-big-letter a{
+        padding-left: 0px !important;
+      }
+      td ul {
+        margin-left: 16px !important;
+      }
+      p,
+      a,
+      ul {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        margin-left: 0px !important;
+      }
+      .col-1 .full {
+        width: 100% !important;
+        height: auto !important;
+      }
+      .on-mobile-full {
+        clear: both !important;
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 0px !important;
+
+        padding-right: 0px !important;
+      }
+      .padding-bottom-mobile {
+        padding-bottom: 40px !important;
+      }
+      .product-module img {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+      .col-6,
+      .col-8,
+      .col-4,
+      .col,
+      .col-1 {
+        padding-left: 0px !important;
+        display: block !important;
+        width: 100% !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+    }
+
+    /* end media */
+
+    .full {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      direction: ltr !important;
+    }
+    @media screen and (max-width: 320px) {
+      .center-on-mobile {
+        margin-left: 0px !important;
+      }
+    }
+  </style>
+  <!-- Progressive Enhancements : END -->
+
+  <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+  <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+</head>
+
+<body width="100%" bgcolor="#f3f3f3" style="margin: 0; mso-line-height-rule: exactly;">
+  <center style="width: 100%; background: #f3f3f3; text-align: left;">
+
+    <!-- Email Header -->
+    <table role="presentation" style="background:#fff;border-bottom: 1px solid #ccc;" cellspacing="0" cellpadding="0" border="0"
+      align="center" width="600" style="margin: auto;" class="email-container">
+      <tr>
+        <td style="padding: 20px 0; text-align: center">
+          <img src="dist/assets/img/logo.png" width="" height="" alt="alt_text" border="0"
+            style=" float:left; padding-left: 20px;height: auto; background: #fff; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #fff;">
+        </td>
+        <td style="padding: 20px 0; text-align: center">
+          <p style="float:right; padding-right: 20px;">September 2017</p>
+        </td>
+      </tr>
+    </table>
+    <!-- Email Header -->
+
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
+
+
+<!-- full image -->
+<tr>
+        <td class="">
+          <table role="presentation" width="100%" border="0" align="center" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+              <td class="" bgcolor="#ffffff" align="center">
+                <img src="dist/assets/img/play.jpg" alt="alt_text" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #414141; margin: auto;" class="g-img" height="" width="600" border="0" align="middle">
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+      <tr class="tr-full-img">
+            <td style="padding-top:56px;padding-bottom:60px;" valign="top" bgcolor="#ffffff" align="center">
+              <table width="80%">
+                <tbody>
+                  <tr>
+                    <td valign="top" align="center">
+                      <p class="headline-26" style="font-size:27px;margin:0px; color:#414141;font-weight:bold;">HEADLINE GOES HERE.
+                        <br> MODULE WITH ONE COLUMN.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding-left:0px" width="380" valign="top" bgcolor="#ffffff" align="left">
+                      <p style="font-size:14px; margin-bottom:30px;margin-top:17px;color:#414141; line-height:20px;">
+    
+                          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+                      </p>
+                    </td>
+                    <!-- button -->
+                    </tr><tr>
+                      <td style="padding-left:16px;padding-right:16px;padding-top: 0px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #414141;" bgcolor="#ffffff">
+    
+                        <table class="table-button space-mobile-40" role="presentation" style="margin: auto;" border="0" align="center" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td style="border-radius: 3px; background: #007ab3; text-align: center;" class="button-td">
+                                <a href="http://www.google.com" style="background: #007ab3;letter-spacing:2px; border: 15px solid #007ab3; font-family:'Arial',sans-serif;  font-size: 13px; line-height:1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: normal;" class="button-a mobile-line-height">
+                                  <span style="color:#ffffff;letter-spacing:1px;font-weight:bold;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;REGISTER NOW&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- button -->
+                  
+                </tbody>
+              </table>
+            </td>
+          </tr>
+<!-- full image -->
+
+
+
+
+
+      <!-- footer(long version) -->
+ 
+      <tr class="footer-bottom" style="border-top: 1px solid #e4e2e2;">
+        <td bgcolor="#ffffff" align="center">
+          <table width="100%"  cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+
+              <tr> 
+                <td class="on-mobile-full" align="left" >
+                    <img class="mobile-visible" src="dist/assets/img/social/allianz-footer.png">
+                  <p style="font-size:12px;color:#767676; margin-left:16px;margin-bottom:20px;margin-top:20px">
+                    <b>© Allianz 2017</b>
+                    <a style="color:#767676; margin-left: 10px;" href="https://www.allianz.com/">www.allianz.com</a>
+                  </p>
+                </td>
+                
+                <td class="on-mobile-full bottom-end"  align="right">
+                  <p style="font-size:12px;letter-spacing: 0.04rem;color: #006192;margin-right:16px;margin-bottom:20px;margin-top:20px"><strong><img style="vertical-align:middle; margin-top: -1px;" src="dist/assets/img/social/icon_call_phone_out2_24px.png"> Call support hotline:</strong>
+                    <a style="font-size: 12px !important; color: #006192;" href="#">
+                      <strong>01 456 12 89</strong>
+                    </a>
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- footer(long version) -->
+
+    </table>
+    <!-- copy align center-->
+  </center>
+</body>
+</html>

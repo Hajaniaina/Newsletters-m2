@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <meta charset="utf-8">
+  <!-- utf-8 works for most cases -->
+  <meta name="viewport" content="width=device-width">
+  <!-- Forcing initial-scale shouldn't be necessary -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Use the latest (edge) version of IE rendering engine -->
+  <meta name="x-apple-disable-message-reformatting">
+  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+  <title></title>
+  <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+  <!-- Web Font / @font-face : BEGIN -->
+  <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+
+  <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+  <!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+
+  <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+  <!--[if !mso]><!-->
+  <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+  <!--<![endif]-->
+
+  <!-- Web Font / @font-face : END -->
+
+  <!-- CSS Reset : BEGIN -->
+  <style>
+    /* What it does: Remove spaces around the email design added by some email clients. */
+
+    /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+
+    html,
+    body, {
+      margin: 0 auto !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+      font-family: 'Arial', sans-serif !important;
+    }
+    a,li,p,span,b,strong{
+      font-family: 'Arial', sans-serif !important;
+    }
+    /* What it does: Stops email clients resizing small text. */
+    img {
+      image-rendering: auto;
+      image-rendering: crisp-edges;
+      image-rendering: pixelated;
+    }
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* What it does: Centers email on Android 4.4 */
+
+    div[style*="margin: 16px 0"] {
+      margin: 0 !important;
+    }
+
+    /* What it does: Stops Outlook from adding extra spacing to tables. */
+
+    table,
+    td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+
+    /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      margin: 0 auto !important;
+    }
+
+    table table table {
+      table-layout: auto;
+    }
+
+    /* What it does: Uses a better rendering method when resizing images in IE. */
+
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+
+    /* What it does: A work-around for email clients meddling in triggered links. */
+
+    *[x-apple-data-detectors],
+    /* iOS */
+
+    .x-gmail-data-detectors,
+    /* Gmail */
+
+    .x-gmail-data-detectors *,
+    .aBn {
+      border-bottom: 0 !important;
+      cursor: default !important;
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+
+    .a6S {
+      display: none !important;
+      opacity: 0.01 !important;
+    }
+
+    /* If the above doesn't work, add a .g-img class to any image in question. */
+
+    img.g-img+div {
+      display: none !important;
+    }
+
+    /* What it does: Prevents underlining the button text in Windows 10 */
+
+    .button-link {
+      text-decoration: none !important;
+    }
+    .mobile-visible {
+      display:none;
+      visibility: hidden;
+    }
+    /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+
+    /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+    /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+
+    @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+      /* iPhone 6 and 6+ */
+      .email-container {
+        min-width: 375px !important;
+      }
+    }
+  </style>
+  <!-- CSS Reset : END -->
+
+  <!-- Progressive Enhancements : BEGIN -->
+  <style>
+    /* What it does: Hover styles for buttons */
+
+    .button-td,
+    .button-a {
+      transition: all 100ms ease-in;
+      white-space: nowrap;
+    }
+
+    .white-button:hover {
+      background: #ffffff;
+    }
+
+    .button-td:hover,
+    .button-a:hover {
+      background: #006192;
+      border-color: #006192;
+    }
+
+    /* Media Queries */
+
+    a {
+      text-decoration: none !important;
+      vertical-align: bottom;
+    }
+
+    img.no-align {
+      vertical-align: 0 !important;
+    }
+    .product-two-columns-full p {
+        margin-top: 0px !important;
+        margin-bottom:15px !important;
+      }
+
+    a img {
+      vertical-align: middle;
+    }
+   /* .mobile-visible{
+        display:none !important;
+        visibility: hidden !important;
+        mso-hide:all;
+        max-height:0;
+   
+   } */
+    @media screen and (max-width: 600px) {
+      .table-button {
+        width: auto !important;
+      }
+      .email-container {
+        width: 100% !important;
+        margin: auto !important;
+      }
+
+      /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+      .fluid {
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      /* What it does: Forces table cells into full-width rows. */
+      .stack-column,
+      .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+      /* And center justify these ones. */
+      .stack-column-center {
+        text-align: center !important;
+      }
+
+      /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+      .center-on-narrow {
+        text-align: center !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+      }
+      table.center-on-narrow {
+        display: inline-block !important;
+      }
+
+
+      /* What it does: Adjust typography on small screens to improve readability */
+      .email-container p {
+        font-size: 16px !important;
+        line-height: 22px !important;
+      }
+    }
+
+    .padding {
+      padding: 20px 20px 16px 20px;
+    }
+
+    .col-1 {
+      text-align: left;
+      width: 114px;
+    }
+
+    .col-4 {
+      margin: 0 auto;
+      text-align: left;
+      width: 177.33px
+    }
+
+    .col-6 {
+      text-align: left;
+      width: 274px;
+    }
+
+    .col-8 {
+
+      text-align: left;
+      width: 370.67px
+    }
+
+    .product-module img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    .col-1 .full {
+      height: 184px;
+    }
+   .price-eur{
+     text-align: left;
+   }
+    @media screen and (max-width: 590px) {
+      .stage-A .hide-mobile-all, .stage-1B .hide-mobile-all {
+    display: none !important;
+   max-height:0px !important;
+   overflow:hidden !important;
+   mso-hide:all;
+}
+
+      .tr-full-img .space-mobile-40, .tr-two-column .space-mobile-40{
+        margin-top: 3px !important;
+      }
+
+      .teaser-light-bg .space-mobile-40, .teaser-dark-bg .space-mobile-40, 
+      .teaser-freestanding .space-mobile-40 {
+              margin-top: 25px!important;
+      }
+
+
+      .purple-icons .space-mobile-40, .yellow-icon .space-mobile-40,
+      .stage-50-teaser .space-mobile-40{
+        margin-top:13px !important;
+      }
+      .product-two-columns-full a{
+        display: block;
+        margin-bottom: 40px;
+      }
+  
+      .latest-products .on-mobile-full p{
+        margin-left: 0px !important;
+      }
+      .icons-price-models {
+        border-bottom: 1px solid #ccc; 
+      }
+      .product-module-1 img{
+        margin-left:0px !important;
+        
+      }
+      .stack-column-center{
+        padding-left:0px !important;
+        padding-right: 0px !important;
+      }
+      .price-eur{
+     text-align: left !important;
+   }
+      p.headline-35{
+        font-size:35px !important;
+        line-height: 41px !important;
+      }
+      .price-model p.price-35{
+        margin-top: 25px !important;
+      }
+      p.headline-26{
+        font-size:26px !important;
+        line-height: 32px !important;
+      }
+      .no-padding-all-lr{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+      }
+      .dark-tease-50 a{
+        padding-left: 0px !important;
+      }
+      .footer-bottom p{
+          text-align: center !important;
+      }
+      .footer-bottom b {
+          display: block !important;
+          margin-bottom: 20px !important; 
+      }
+      .mobile-line-height {
+        line-height: 30px !important;
+      }
+      .bottom-end{
+        margin-bottom: 30px !important;
+        margin-top: 40px;
+        text-align: center !important;
+      }
+      .bottom-end p, .bottom-end strong {
+        font-size: 16px !important;
+      }
+      .mobile-visible { 
+        display: block !important;
+        text-align: center !important;
+        margin-top:50px !important;
+        margin-bottom:40px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        visibility: visible !important;
+      }
+      .bottom-end a {
+        padding-left:0px !important;
+      }
+    
+      .price-big-letter a {
+        margin-left: 0px !important;
+      }
+      .price-big-letter .big-letter{
+        margin-right: 0px !important;
+      }
+      .center-on-mobile {
+        margin-left: 64px !important;
+      }
+      .price-big-letter {
+        padding-left: 0px !important;
+      }
+    
+      .padding-mobile-16 {
+        padding-left: 20px !important;
+      }
+      .mobile-no-padding {
+        padding: 0px !important;
+      }
+      .mobile-center {
+        text-align: center !important;
+      }
+      .teaser-light-bg .table-button,
+      .teaser-dark-bg .table-button,
+      .teaser-freestanding .table-button,
+      .three-columns .table-button,
+      .stage-50-teaser .table-button,
+      .image-BTN .table-button {
+        margin-left: 16px !important;
+        width: 92% !important;
+      }
+      .on-mobile-full p,
+      .teaser-dark-bg p,
+      .teaser-freestanding p,
+      .teaser-light-bg p,
+      .stage-1B p.mobile-35 {
+        margin-left: 0px !important;
+
+      }
+      .stage-1B .table-button {
+        margin-left: 0px !important;
+      }
+      .stage-1B p.mobile-35 {
+        padding-left: 0px !important;
+      }
+      .mobile-bottom-margin {
+        margin-bottom: 40px !important;
+      }
+      .table-button {
+        width: 100% !important;
+      }
+      .no-align {
+        vertical-align: none !important;
+      }
+      .full {
+        height: auto !important;
+      }
+      .padding-bottom-mobile {
+        height: auto !important;
+      }
+      .stage-A p.mobile-35,
+      .stage-1B p.mobile-35 {
+        font-size: 35px !important;
+        line-height: 41px !important;
+        margin-left: 0px !important;
+      }
+      .mobile-left-align {
+        text-align: left !important;
+      }
+      .stage-A p {
+        padding-left: 0px !important;
+      }
+      .stage-A .table-button {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+      }
+      .product-two-columns-full td {
+        height: auto !important;
+      }
+      .product-two-columns-full img {
+        height: auto !important;
+      }
+      .copy-left .headline {
+        margin-top: 20px;
+      }
+      table {
+        width: 100% !important;
+      }
+
+      .teaser-dark-bg .g-img {
+        height: auto !important;
+      }
+      .teaser-light-bg .table-button,
+      .teaser-dark-bg .table-button,
+      .teaser-freestanding .table-button,
+      .padding-on-mobile-btn .table-button {
+        margin-left: 16px !important;
+      }
+      .teaser-freestanding .padding-on-mobile,
+      .padding-on-mobile-btn {
+        padding-bottom: 125px !important;
+      }
+      .stage-1B .padding-on-mobile-btn {
+        padding-bottom: 80px !important;
+      }
+      .padding-on-mobile {
+        padding-left: 16px !important;
+      }
+      .three-columns-icons img {
+        margin-top: 0px !important;
+      }
+      p.on-mobile-big-letter {
+        font-size: 67px !important;
+        line-height: 67px !important;
+        float: none !important;
+      }
+      .no-padding-top-bottom {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+      }
+      .cutout .g-img {
+        display: block !important;
+        width: auto !important;
+      }
+      .copy-left,
+      .copy-center {
+        padding: 40px 20px !important;
+      }
+      .g-img {
+        max-width: 100% !important;
+      }
+      .price-big-letter p.big-letter {
+        font-size: 67px !important;
+        margin-top: 27px !important;
+        padding-left:0px !important;
+        padding-right: 0px !important;
+      }
+      .price-big-letter .price-eur {
+        display: block;
+        text-align: right;
+        width: 250px;
+        padding-left:7px !important;
+        margin-top: 10px !important;
+      }
+      .price-big-letter a{
+        padding-left: 0px !important;
+      }
+      td ul {
+        margin-left: 16px !important;
+      }
+      p,
+      a,
+      ul {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        margin-left: 0px !important;
+      }
+      .col-1 .full {
+        width: 100% !important;
+        height: auto !important;
+      }
+      .on-mobile-full {
+        clear: both !important;
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 0px !important;
+
+        padding-right: 0px !important;
+      }
+      .padding-bottom-mobile {
+        padding-bottom: 40px !important;
+      }
+      .product-module img {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+      .col-6,
+      .col-8,
+      .col-4,
+      .col,
+      .col-1 {
+        padding-left: 0px !important;
+        display: block !important;
+        width: 100% !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+    }
+
+    /* end media */
+
+    .full {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      direction: ltr !important;
+    }
+    @media screen and (max-width: 320px) {
+      .center-on-mobile {
+        margin-left: 0px !important;
+      }
+    }
+  </style>
+  <!-- Progressive Enhancements : END -->
+
+  <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+  <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+</head>
+
+<body width="100%" bgcolor="#f3f3f3" style="margin: 0; mso-line-height-rule: exactly;">
+  <center style="width: 100%; background: #f3f3f3; text-align: left;">
+
+    <!-- Email Header -->
+    <table role="presentation" style="background:#fff;border-bottom: 1px solid #ccc;" cellspacing="0" cellpadding="0" border="0"
+      align="center" width="600" style="margin: auto;" class="email-container">
+      <tr>
+        <td style="padding: 20px 0; text-align: center">
+          <img src="dist/assets/img/logo.png" width="" height="" alt="alt_text" border="0"
+            style=" float:left; padding-left: 20px;height: auto; background: #fff; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #fff;">
+        </td>
+        <td style="padding: 20px 0; text-align: center">
+          <p style="float:right; padding-right: 20px;">September 2017</p>
+        </td>
+      </tr>
+    </table>
+    <!-- Email Header -->
+
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
+        <tr class="stage-50-teaser">
+            <td>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                  <tr>
+                    <td class="on-mobile-full">
+                      <img class="full g-img" src="dist/assets/img/bld-10.jpg" alt="Man with tablet" style="max-width: 100%;
+                        display: block;">
+                    </td>
+                    <td class="on-mobile-full padding-on-mobile-btn" style="padding-top:35px; padding-left:20px;padding-bottom:40px;" valign="top" bgcolor="#49648C">
+                      <p style="margin:0px;font-size: 26px !important;padding-bottom: 18px; line-height: 32px !important; color:#ffffff;">
+                            GET THE MOST <BR>
+                                OUT OF
+                        <font style="color:#E3EBAF;">YOUR <br> TRAVEL<br> INSURANCE</font>
+                      </p>
+                      <!-- <p style="margin:0px;font-size: 14px; line-height: 20px; color:#ffffff;margin-top: 5px;
+                          padding-bottom: 25px;">Lorem ipsum dolor sit etiam.</p> -->
+                      <table class="table-button space-mobile-40" role="presentation" style="margin: auto;" border="0" align="left" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td style="border-radius: 4px; background: #ffffff; text-align: center;" class="button-td white-button">
+                              <a href="#" style="background: #ffffff;letter-spacing:1px; border: 15px solid #ffffff; font-family:'Arial',sans-serif;  font-size: 12px; line-height:1; text-align: center; text-decoration: none; display: block; border-radius: 4px; font-weight: normal;" class="button-a mobile-line-height">
+                                <span style="color:#006192;letter-spacing:1px;font-weight:bold !important;" class="button-link">&nbsp;&nbsp;CHOOSE YOUR OPTIONS&nbsp;&nbsp;</span>
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <!--product module -two columns -->
+  <tr>
+    <td bgcolor="#ffffff" align="center" style="padding-top:37px;">
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <td align="center" valign="top">
+              <p class="headline-26" class="headline-26" style="font-weight:bold;font-size: 20px;margin-bottom:40px;">MODULE WITH TWO COLUMNS.
+                <br> HAVE A LOOK AT OUR LATEST PRODUCTS.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <tr class="product-two-columns-full" cellspacing="0" cellpadding="0" border="0">
+    <td class="on-mobile-full" bgcolor="#ffffff" cellspacing="0" cellpadding="0" border="0">
+      <table width="95%" style="margin-bottom:14px !important;" cellspacing="0" cellpadding="0" border="0">
+        <tr bgcolor="#ffffff">
+          <td valign="top" class="on-mobile-full no-padding-top-bottom mobile-auto-width" bgcolor="#96DCFA"style=" ;padding-bottom:25px;">
+              <table class="latest-products" cellspacing="0" cellpadding="0" border="0">
+                  <tbody>
+                      <tr>
+                    <td >
+                      
+            <img class="full" src="dist/assets/img/camping.png" width="" height=""
+              alt="Easy" style="display:block;">
+          
+            
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 20px 20px 0px 20px;">
+              <p style="font-size: 16px;color:#414141;font-weight:bold; letter-spacing:0.03rem;">
+                  Easy & relaxed
+                  camping time
+                </p>
+                <p style="font-size:14px;font-weight:normal; color:#414141;  margin:10px 0px;line-height:20px;">Lorem ipsum dolor sit amet, ego aute consetetur sadipscing elitr.</p>
+                <a style="font-weight:bold;letter-spacing:1px;font-size:12px !important; color:#ffffff;letter-spacing:1px;" class="read-more"
+                  href="#">
+                 
+                  <font style="color:#49648C; font-size:12px !important;letter-spacing:1px;" size="1">
+                    › MORE INFO
+                  </font>
+                </a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+          </td>
+  
+          <td class="on-mobile-full" width="20px" bgcolor="#ffffff"></td>
+          <td valign="top" class="on-mobile-full no-padding-top-bottom mobile-auto-width" bgcolor="#49648C" style=" padding-bottom:25px;">
+              <table class="latest-products" cellspacing="0" cellpadding="0" border="0">
+                  <tbody>
+                      <tr>
+                    <td>
+                      
+            <img class="full" src="dist/assets/img/kid.png" width="" height="" alt="Easy" style="display:block;">
+          
+            
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 20px 20px 0px 20px;">
+              <p style="font-size: 16px;color:#ffffff;font-weight:bold; letter-spacing:0.03rem;">
+                  Family outdoor vacation
+                </p>
+                <p style="font-size:14px;font-weight:normal; color:#ffffff;  margin:10px 0px;line-height:20px;">Lorem ipsum dolor sit amet, ego aute consetetur sadipscing elitr.</p>
+                <a style="font-weight:bold;letter-spacing:1px;font-size:12px !important; color:#ffffff;letter-spacing:1px;" class="read-more" href="#">
+                 
+                  <font style="color:#ffffff; font-size:12px !important;letter-spacing:1px;" size="1">
+                    › MORE INFO
+                  </font>
+                </a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+          </td>
+      
+        </tr>
+      
+      </table>
+    </td>
+  </tr>
+  <!--product module -two columns -->
+  <!-- button -->
+  <tr>
+    <td style="padding: 20px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #414141;" bgcolor="#ffffff">
+      <table role="presentation" style="margin: auto;" border="0" align="center" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="border-radius: 3px; background: #007ab3; text-align: center;" class="button-td">
+              <a href="http://www.google.com" style="background: #007ab3; border: 15px solid #007ab3; font-family:'Arial',sans-serif;  font-size: 13px; line-height:1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: normal;" class="button-a mobile-line-height">
+                <span style="color:#ffffff;font-weight:bold !important;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;GET YOUR QUOTE NOW&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <!-- button -->
+
+      <!-- three columns -image + copy -->
+      <tr>
+        <td bgcolor="#FFFFFF" align="center" style="border-top:1px solid #e4e2e2;">
+          <table>
+            <tr>
+              <td  bgcolor="#FFFFFF" valign="top" style="padding-top:57px; padding-bottom:40px;">
+                <p class="mobile-center headline-26" style="font-size:27px;margin:0px; color:#414141;font-weight:bold;">MODULE WITH THREE COLUMNS</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="no-padding-all-lr" bgcolor="#FFFFFF" align="center" height="" valign="top" style="padding-bottom:52px; ">
+          <table>
+            <tr>
+              <td class="stack-column-center" width="33.33%" >
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                  <tbody>
+                    <tr>
+                      <td class="mobile-no-padding" style="padding:0px 15px; text-align: center" valign="top">
+                        <img src="dist/assets/img/blg-3-d.jpg" alt="alt_text" class="full" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #414141;"
+                          width="170" border="0" height="170">
+                        <p style="margin-top:30px !important; margin-bottom: 8px;font-size:14px;">
+                          <strong>We’ve got special offers to you.</strong>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #414141; padding:0px 15px;  text-align: left;"
+                        class="center-on-narrow padding-bottom-mobile">
+                        <p style="margin: 0;margin-bottom: 8px; font-size:14px; text-align: center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</p>
+                        <a style="letter-spacing:1px;font-size:12px !important;text-align: center; display: block;font-weight: bold;" class="read-more"
+                          href="#">
+                         
+                          <span style="color:#006192;">
+                            <font style="color:#006192; font-size:12px;letter-spacing:1px;" size="1">
+                              › READ MORE
+                            </font>
+                          </span>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td class="stack-column-center" width="33.33%" >
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                  <tbody>
+                    <tr>
+                      <td class="mobile-no-padding" style="padding:0px 15px;  text-align: center" valign="top">
+                        <img src="dist/assets/img/bld-3.jpg" alt="alt_text" class="full" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #414141;"
+                          width="170" border="0" height="170">
+                        <p style="margin-top:30px !important;margin-bottom: 8px;font-size:14px;">
+                          <strong>How to organize your city trip.</strong>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #414141; padding:0px 15px;  text-align: left;"
+                        class="center-on-narrow padding-bottom-mobile">
+                        <p style="margin: 0;margin-bottom: 8px;font-size:14px;text-align: center ">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</p>
+                        <a style="letter-spacing:1px;font-size:12px !important;font-weight: bold; text-align: center; display: block;" class="read-more"
+                          href="#">
+                         
+                          <span style="color:#006192;">
+                            <font style="letter-spacing:1px;color:#006192; font-size:12px;" size="1">
+                              › READ MORE
+                            </font>
+                          </span>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td class="stack-column-center" width="33.33%" >
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                  <tbody>
+                    <tr>
+                      <td class="mobile-no-padding" style="padding:0px 15px;  text-align: center" valign="top">
+                        <img src="dist/assets/img/bld-3-2.jpg" alt="alt_text" class="full" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #414141;"
+                          width="170" border="0" height="170">
+                        <p style="margin-top:30px !important;margin-bottom: 8px;font-size:14px;">
+                          <strong>We care about our environment.</strong>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #414141; padding:0px 15px;  text-align: left;"
+                        class="center-on-narrow ">
+                        <p style="margin: 0; margin-bottom: 8px;font-size:14px;text-align: center; ">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</p>
+                        <a style="letter-spacing:1px;font-size:12px !important;font-weight: bold;text-align: center; display: block;" class="read-more"
+                          href="#">
+                          
+                          <span style="color:#006192;">
+                            <font style="color:#006192; font-size:12px;letter-spacing:1px;" size="1">
+                              › READ MORE
+                            </font>
+                          </span>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- three columns -image + copy -->
+ <!-- Stage_1B -->
+ <tr class="stage-1B">
+    <td bgcolor="#CAD4DE" valign="top" style="padding-left:20px;padding-right:20px;padding-bottom:40px;padding-top:34px;">
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tbody>
+          <tr>
+            <td class="on-mobile-full padding-on-mobile-btn" cellspacing="0" cellpadding="0" border="0" width="68%">
+              <p class="mobile-35" style="margin:0px;font-size:35px;line-height:41px; font-weight:normal; text-align: left; color: #49648C;letter-spacing:1px;">
+                PROFIT FROM A <br>
+                TAILOR-MADE
+              </p>
+              <p class="mobile-35" style="margin:0px;font-size:35px;margin-bottom: 25px;line-height:41px; font-weight:normal; text-align: left; color: #49648C;letter-spacing:1px;">
+                
+                SOLUTION
+              </p>
+              <table class="table-button " role="presentation" style="margin: auto;margin-left:0px !important;" cellspacing="0" cellpadding="0"
+                border="0" align="left">
+                <tbody>
+                  <tr>
+                    <td style="border-radius: 4px; background: #ffffff; text-align: center;" class="button-td white-button">
+                      <a href="#" style="background: #ffffff;letter-spacing:1px; border: 15px solid #ffffff; font-family:'Arial',sans-serif;  font-size: 12px; line-height:1; text-align: center; text-decoration: none; display: block; border-radius: 4px; font-weight: normal;"
+                        class="button-a mobile-line-height">
+                        <span style="color:#006192;letter-spacing:1px;font-weight:bold !important;" class="button-link">&nbsp;&nbsp;CHOOSE YOUR OPTIONS&nbsp;&nbsp;</span>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+            <td class="on-mobile-full mobile-left-align hide-mobile-all" valign="top" align="right">
+              <div style="border-top-left-radius: 1.8em; border-bottom-left-radius: 1.8em; border-top-right-radius: 1.8em; font-weight:normal; text-align: right; color: #ffffff;width:156px; height:122px; background-color:#49648C;">
+                <p style="margin:0px;font-size:40px !important;line-height:41px!important;    padding: 25px 12px 0px;; font-weight:bold; text-align: right; color: #ffffff;letter-spacing:1px;">
+                  24,75€
+                  
+                </p>
+                <p style="font-size:26px;font-weight:normal; margin:0px;padding:0px 12px 12px 12px">per month</p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <!-- Stage_1B -->
+<!-- Teaser + Copy CTA Freestanding Objekt -->
+<tr class="teaser-freestanding" style="border-bottom: 1px solid #e4e2e2;">
+    <td bgcolor="#ffffff">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+        <tr>
+          <td class="on-mobile-full no-padding-top-bottom" style="width:240px;" bgcolor="#ffffff" align="center">
+            <img src="dist/assets/img/bike.jpg" style="max-width:100%;" width="240"
+              height="254" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 240px; height: 254px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #414141; margin: auto;"
+              class="g-img">
+          </td>
+          <td valign="top" class="on-mobile-full padding-on-mobile" style="padding: 0px 20px;" bgcolor="#ffffff" align="left">
+            <p style=" margin-top:38px;font-size: 16px !important; color:#414141;font-weight:bold;">Headline goes here.
+              <br> Module with one box layout.</p>
+            <p style="font-size:14px !important; color: #414141;margin-bottom: 10px;line-height: 20px;margin-right: 20px;">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolor.
+            </p>
+            <table style="margin-top: 10px;" class="table-button space-mobile-40" role="presentation" style="margin: auto;" cellspacing="0"
+              cellpadding="0" border="0" align="left">
+              <tbody>
+                <tr>
+                  <td style="border-radius: 4px; background: #007ab3; text-align: center;" class="button-td ">
+                    <a href="http://www.google.com" style="background: #007ab3;letter-spacing:1px; border: 15px solid #007ab3; font-family:'Arial',sans-serif;  font-size: 12px; line-height:1; text-align: center; text-decoration: none; display: block; border-radius: 4px; font-weight: bold;"
+                      class="button-a mobile-line-height">
+                      <span style="color:#ffffff;letter-spacing:1px;font-weight:bold !important;" class="button-link">&nbsp;&nbsp;FILE A CLAIM NOW&nbsp;&nbsp;</span>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- Teaser + Copy CTA Freestanding Objekt -->
+
+
+      <!-- social media -->
+      <tr>
+        <td bgcolor="#ffffff" align="center">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td align="center" style="padding:16px 20px;">
+                <a href="#" style="padding: 0px 5px;">
+                  <img src="dist/assets/img/social/Google+.png" alt="Google" width="24" height="24">
+                </a>
+                <a href="#" style="padding: 0px 5px;">
+                  <img src="dist/assets/img/social/Facebook.png" alt="Facebook" width="24" height="24">
+                </a>
+                <a href="#" style="padding: 0px 5px;">
+                  <img src="dist/assets/img/social/Twitter.png" alt="Twitter" width="24" height="24">
+                </a>
+                <a href="#" style="padding: 0px 5px;">
+                  <img src="dist/assets/img/social/Mail.png" alt="Email" width="24" height="24">
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- social media -->
+
+      <!-- footer(long version) -->
+      <tr bgcolor="#F4F2F3">
+        <td align="center">
+          <table cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+              <tr>
+                <td align="center">
+                  <p style="font-size:12px;color:#767676; margin-top:40px; margin-bottom: 40px; line-height:18px;">Imprint
+                    <br>
+                    <br> Lorem ipsum dolor sit amet, consetetur sadipscing
+                    <br>Lorem ipsum dolor sit amet, consetetur sadipscing
+                    <br> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidun
+                    <br> E-mail: email@email.com
+                    <br>
+                    <br> Lorem ipsum dolor sit amet, consetetur 
+                    <br> © Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr class="footer-bottom">
+        <td bgcolor="#ffffff" align="center">
+          <table width="100%"  cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+
+              <tr> 
+                <td class="on-mobile-full" align="left" >
+                    <img class="mobile-visible" src="dist/assets/img/social/allianz-footer.png">
+                  <p style="font-size:12px;color:#767676; margin-left:16px;margin-bottom:20px;margin-top:20px">
+                    <b>© Allianz 2017</b>
+                    <a style="color:#767676; margin-left: 10px;" href="https://www.allianz.com/">www.allianz.com</a>
+                  </p>
+                </td>
+                
+                <td class="on-mobile-full bottom-end"  align="right">
+                  <p style="font-size:12px;letter-spacing: 0.04rem;color: #006192;margin-right:16px;margin-bottom:20px;margin-top:20px"><strong><img style="vertical-align:middle; margin-top: -1px;" src="dist/assets/img/social/icon_call_phone_out2_24px.png"> Call support hotline:</strong>
+                    <a style="font-size: 12px !important; color: #006192;" href="#">
+                      <strong>01 456 12 89</strong>
+                    </a>
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- footer(long version) -->
+
+    </table>
+    <!-- copy align center-->
+  </center>
+</body>
+</html>

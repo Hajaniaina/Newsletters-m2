@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <meta charset="utf-8">
+  <!-- utf-8 works for most cases -->
+  <meta name="viewport" content="width=device-width">
+  <!-- Forcing initial-scale shouldn't be necessary -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Use the latest (edge) version of IE rendering engine -->
+  <meta name="x-apple-disable-message-reformatting">
+  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+  <title>Allianz Madagascar</title>
+ 
+  <style>
+    /* What it does: Remove spaces around the email design added by some email clients. */
+
+    /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+
+    html,
+    body, {
+      margin: 0 auto !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+      font-family: 'Arial', sans-serif !important;
+    }
+    a,li,p,span,b,strong{
+      font-family: 'Arial', sans-serif !important;
+    }
+    /* What it does: Stops email clients resizing small text. */
+
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* What it does: Centers email on Android 4.4 */
+
+    div[style*="margin: 16px 0"] {
+      margin: 0 !important;
+    }
+
+    /* What it does: Stops Outlook from adding extra spacing to tables. */
+
+    table,
+    td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+
+    /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      margin: 0 auto !important;
+    }
+
+    table table table {
+      table-layout: auto;
+    }
+
+    /* What it does: Uses a better rendering method when resizing images in IE. */
+
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+
+    /* What it does: A work-around for email clients meddling in triggered links. */
+
+    *[x-apple-data-detectors],
+    /* iOS */
+
+    .x-gmail-data-detectors,
+    /* Gmail */
+
+    .x-gmail-data-detectors *,
+    .aBn {
+      border-bottom: 0 !important;
+      cursor: default !important;
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+
+    .a6S {
+      display: none !important;
+      opacity: 0.01 !important;
+    }
+
+    /* If the above doesn't work, add a .g-img class to any image in question. */
+
+    img.g-img+div {
+      display: none !important;
+    }
+
+    /* What it does: Prevents underlining the button text in Windows 10 */
+
+    .button-link {
+      text-decoration: none !important;
+    }
+    .mobile-visible {
+      display:none;
+      visibility: hidden;
+    }
+    /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+
+    /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+    /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+
+    @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+      /* iPhone 6 and 6+ */
+      .email-container {
+        min-width: 375px !important;
+      }
+    }
+  </style>
+  <!-- CSS Reset : END -->
+
+  <!-- Progressive Enhancements : BEGIN -->
+  <style>
+    /* What it does: Hover styles for buttons */
+
+    .button-td,
+    .button-a {
+      transition: all 100ms ease-in;
+      white-space: nowrap;
+    }
+
+    .white-button:hover {
+      background: #ffffff;
+    }
+
+    .button-td:hover,
+    .button-a:hover {
+      background: #006192;
+      border-color: #006192;
+    }
+
+    /* Media Queries */
+
+    a {
+      text-decoration: none !important;
+      vertical-align: bottom;
+    }
+
+    img.no-align {
+      vertical-align: 0 !important;
+    }
+    .product-two-columns-full p {
+        margin-top: 0px !important;
+        margin-bottom:15px !important;
+      }
+
+    a img {
+      vertical-align: middle;
+    }
+   /* .mobile-visible{
+        display:none !important;
+        visibility: hidden !important;
+        mso-hide:all;
+        max-height:0;
+   
+   } */
+    @media screen and (max-width: 600px) {
+      .table-button {
+        width: auto !important;
+      }
+      .email-container {
+        width: 100% !important;
+        margin: auto !important;
+      }
+
+      /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+      .fluid {
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      /* What it does: Forces table cells into full-width rows. */
+      .stack-column,
+      .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+      /* And center justify these ones. */
+      .stack-column-center {
+        text-align: center !important;
+      }
+
+      /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+      .center-on-narrow {
+        text-align: center !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+      }
+      table.center-on-narrow {
+        display: inline-block !important;
+      }
+
+
+      /* What it does: Adjust typography on small screens to improve readability */
+      .email-container p {
+        font-size: 16px !important;
+        line-height: 22px !important;
+      }
+    }
+
+    .padding {
+      padding: 20px 20px 16px 20px;
+    }
+
+    .col-1 {
+      text-align: left;
+      width: 114px;
+    }
+
+    .col-4 {
+      margin: 0 auto;
+      text-align: left;
+      width: 177.33px
+    }
+
+    .col-6 {
+      text-align: left;
+      width: 274px;
+    }
+
+    .col-8 {
+
+      text-align: left;
+      width: 370.67px
+    }
+
+    .product-module img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    .col-1 .full {
+      height: 184px;
+    }
+   .price-eur{
+     text-align: left;
+   }
+    @media screen and (max-width: 590px) {
+      .stage-A .hide-mobile-all, .stage-1B .hide-mobile-all {
+    display: none !important;
+   max-height:0px !important;
+   overflow:hidden !important;
+   mso-hide:all;
+}
+
+      .tr-full-img .space-mobile-40, .tr-two-column .space-mobile-40{
+        margin-top: 3px !important;
+      }
+
+      .teaser-light-bg .space-mobile-40, .teaser-dark-bg .space-mobile-40, 
+      .teaser-freestanding .space-mobile-40 {
+              margin-top: 25px!important;
+      }
+
+
+      .purple-icons .space-mobile-40, .yellow-icon .space-mobile-40,
+      .stage-50-teaser .space-mobile-40{
+        margin-top:13px !important;
+      }
+      .product-two-columns-full a{
+        display: block;
+        margin-bottom: 40px;
+      }
+  
+      .latest-products .on-mobile-full p{
+        margin-left: 0px !important;
+      }
+      .icons-price-models {
+        border-bottom: 1px solid #ccc; 
+      }
+      .product-module-1 img{
+        margin-left:0px !important;
+        margin-bottom: 0px !important;
+        
+      }
+      .stack-column-center{
+        padding-left:0px !important;
+        padding-right: 0px !important;
+      }
+      .price-eur{
+     text-align: left !important;
+   }
+      p.headline-35{
+        font-size:35px !important;
+        line-height: 41px !important;
+      }
+      .price-model p.price-35{
+        margin-top: 25px !important;
+      }
+      p.headline-26{
+        font-size:26px !important;
+        line-height: 32px !important;
+      }
+      .no-padding-all-lr{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+      }
+      .dark-tease-50 a{
+        padding-left: 0px !important;
+      }
+      .footer-bottom p{
+          text-align: center !important;
+      }
+      .footer-bottom b {
+          display: block !important;
+          margin-bottom: 20px !important; 
+      }
+      .mobile-line-height {
+        line-height: 30px !important;
+      }
+      .bottom-end{
+        margin-bottom: 30px !important;
+        margin-top: 40px;
+        text-align: center !important;
+      }
+      .bottom-end p, .bottom-end strong {
+        font-size: 16px !important;
+      }
+      .mobile-visible { 
+        display: block !important;
+        text-align: center !important;
+        margin-top:50px !important;
+        margin-bottom:40px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        visibility: visible !important;
+      }
+      .bottom-end a {
+        padding-left:0px !important;
+      }
+    
+      .price-big-letter a {
+        margin-left: 0px !important;
+      }
+      .price-big-letter .big-letter{
+        margin-right: 0px !important;
+      }
+      .center-on-mobile {
+        margin-left: 64px !important;
+      }
+      .price-big-letter {
+        padding-left: 0px !important;
+      }
+    
+      .padding-mobile-16 {
+        padding-left: 20px !important;
+      }
+      .mobile-no-padding {
+        padding: 0px !important;
+      }
+      .mobile-center {
+        text-align: center !important;
+      }
+      .teaser-light-bg .table-button,
+      .teaser-dark-bg .table-button,
+      .teaser-freestanding .table-button,
+      .three-columns .table-button,
+      .stage-50-teaser .table-button,
+      .image-BTN .table-button {
+        margin-left: 16px !important;
+        width: 92% !important;
+      }
+      .on-mobile-full p,
+      .teaser-dark-bg p,
+      .teaser-freestanding p,
+      .teaser-light-bg p,
+      .stage-1B p.mobile-35 {
+        margin-left: 0px !important;
+
+      }
+      .stage-1B .table-button {
+        margin-left: 0px !important;
+      }
+      .stage-1B p.mobile-35 {
+        padding-left: 0px !important;
+      }
+      .mobile-bottom-margin {
+        margin-bottom: 40px !important;
+      }
+      .table-button {
+        width: 100% !important;
+      }
+      .no-align {
+        vertical-align: none !important;
+      }
+      .full {
+        height: auto !important;
+      }
+      .padding-bottom-mobile {
+        height: auto !important;
+      }
+      .stage-A p.mobile-35,
+      .stage-1B p.mobile-35 {
+        font-size: 35px !important;
+        line-height: 41px !important;
+        margin-left: 0px !important;
+      }
+      .mobile-left-align {
+        text-align: left !important;
+      }
+      .stage-A p {
+        padding-left: 0px !important;
+      }
+      .stage-A .table-button {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+      }
+      .product-two-columns-full td {
+        height: auto !important;
+      }
+      .product-two-columns-full img {
+        height: auto !important;
+      }
+      .copy-left .headline {
+        margin-top: 20px;
+      }
+      table {
+        width: 100% !important;
+      }
+
+      .teaser-dark-bg .g-img {
+        height: auto !important;
+      }
+      .teaser-light-bg .table-button,
+      .teaser-dark-bg .table-button,
+      .teaser-freestanding .table-button,
+      .padding-on-mobile-btn .table-button {
+        margin-left: 16px !important;
+      }
+      .teaser-freestanding .padding-on-mobile,
+      .padding-on-mobile-btn {
+        padding-bottom: 125px !important;
+      }
+      .stage-1B .padding-on-mobile-btn {
+        padding-bottom: 80px !important;
+      }
+      .padding-on-mobile {
+        padding-left: 16px !important;
+      }
+      .three-columns-icons img {
+        margin-top: 0px !important;
+      }
+      p.on-mobile-big-letter {
+        font-size: 67px !important;
+        line-height: 67px !important;
+        float: none !important;
+      }
+      .no-padding-top-bottom {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+      }
+      .cutout .g-img {
+        display: block !important;
+        width: auto !important;
+      }
+      .copy-left,
+      .copy-center {
+        padding: 40px 20px !important;
+      }
+      .g-img {
+        max-width: 100% !important;
+      }
+      .price-big-letter p.big-letter {
+        font-size: 67px !important;
+        margin-top: 27px !important;
+        padding-left:0px !important;
+        padding-right: 0px !important;
+      }
+      .price-big-letter .price-eur {
+        display: block;
+        text-align: right;
+        width: 250px;
+        padding-left:7px !important;
+        margin-top: 10px !important;
+      }
+      .price-big-letter a{
+        padding-left: 0px !important;
+      }
+      td ul {
+        margin-left: 16px !important;
+      }
+      p,
+      a,
+      ul {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        margin-left: 0px !important;
+      }
+      .col-1 .full {
+        width: 100% !important;
+        height: auto !important;
+      }
+      .on-mobile-full {
+        clear: both !important;
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 0px !important;
+
+        padding-right: 0px !important;
+      }
+      .padding-bottom-mobile {
+        padding-bottom: 40px !important;
+      }
+      .product-module img {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+      .col-6,
+      .col-8,
+      .col-4,
+      .col,
+      .col-1 {
+        padding-left: 0px !important;
+        display: block !important;
+        width: 100% !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+    }
+
+    /* end media */
+
+    .full {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      direction: ltr !important;
+    }
+    @media screen and (max-width: 320px) {
+      .center-on-mobile {
+        margin-left: 0px !important;
+      }
+    }
+  </style>
+  
+</head>
+
+<body width="100%" bgcolor="#f3f3f3" style="margin: 0; mso-line-height-rule: exactly;">
+  <center style="width: 100%; background: #f3f3f3; text-align: left;">
+      <span style="display: none;">*|MC_PREVIEW_TEXT|*</span>
+        <div style="width: 100%;text-align: center;"> <a target="_blank" style="color: #828282;font-size: 12px;" href="*|ARCHIVE|*"><br/>Afficher cet e-mail dans votre navigateur</a>&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" style="color: #828282;font-size: 12px;" href="#">Télécharger en PDF</a></div>
+
+
+    <!-- Email Header -->
+    <table role="presentation" style="background:#fff;border-bottom: 1px solid #ccc;border-top: 20px solid #f3f3f3;" cellspacing="0" cellpadding="0" border="0"
+      align="center" width="600" style="margin: auto;" class="email-container">
+      <tr>
+        <td style="padding: 20px 0; text-align: center">
+          <img src="dist/assets/img/logo.png" width="" height="" alt="alt_text" border="0"
+            style=" float:left; padding-left: 20px;height: auto; background: #fff; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #fff;">
+        </td>
+        <td style="padding: 20px 0; text-align: center">
+          <p style="float:right; padding-right: 20px;">Avril 2020</p>
+        </td>
+      </tr>
+    </table>
+    <!-- Email Header -->
+
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
+
+<!-- Stage_1A-->
+<tr class="stage-A">
+        <td class=" copy-center" bgcolor="#5A3982" align="center" style="padding: 32px 20px 40px 20px;">
+          <table>
+            <tbody>
+              <tr>
+                <td class="on-mobile-full" style="width: 64%;" valign="top">
+                  <p class="mobile-35" style="margin:0px;margin-bottom: 22px;font-size:22px;line-height:41px; font-weight:normal; text-align: left; color: #ffffff;letter-spacing:1px;">ASSURANCE MULTIRISQUE<br>  HABITAION
+                    <span style="color:#7ADEDB">ET <br> TOUS RISQUES AUTO MOTO </span>  
+                  </p>
+                
+                  <table class="table-button" style="" role="presentation" style="margin: auto;" cellspacing="0" cellpadding="0" border="0"
+                    align="left">
+                    <tbody>
+                      <tr>
+                        <td style="border-radius: 3px; background: #ffffff; text-align: center; padding-left:16px;padding-right:16px;" class="button-td white-button">
+                          <a href="https://urlz.fr/bD2Z" style="font-weight:bold;letter-spacing:1px !important; background: #ffffff; border: 15px solid #ffffff; font-family:'Arial',sans-serif;  font-size: 13px; line-height:1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: normal;"
+                            class="button-a  mobile-line-height">
+                            <span style="color:#006192; letter-spacing:1px !important;font-weight:bold; " class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;CA M'INTERESSE&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td class="on-mobile-full hide-mobile-all" valign="top">
+                  <hr style=" height: 3px;color: #ffffff;border: 0;background: #ffffff;">
+                  <p style="padding: 0px 5px;margin:0px;font-size:15px;line-height:19px; font-weight:normal; text-align: left; color: #ffffff;letter-spacing:1px;">
+                    Offre valable<br>
+                   jusqu'au 20 avril 2020
+                  </p>
+                  <p style="padding: 0px 5px;margin:20px 0px 16px 0px;font-size:40px;line-height:41px; font-weight:normal; text-align: left; color: #ffffff;letter-spacing:1px;">
+                    2 Mois
+                  </p>
+                  <p style="padding: 0px 5px;margin:0px;font-size:15px;line-height:19px; text-align: left; color: #ffffff;letter-spacing:1px;">
+                   Voir conditions en agence
+                  </p>
+                  <hr style=" height: 3px;color: #ffffff;border: 0;background: #ffffff;">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- Stage_1A-->
+
+
+      <!--Stage1_add-->
+      <tr class="purple-icons" width="100%">
+            <td bgcolor="#F5F0E0" style="padding-bottom: 43px;">
+              <table cellspacing="0" cellpadding="0" border="0">
+                <tbody>
+                  <tr>
+                    <td>
+                     <a href="https://urlz.fr/bD2Z"> <img style="max-width: 100%; width:100%;" src="dist/assets/img/promquinze.jpg" alt="Promotion -15 %"></a>
+                    </td>
+                  </tr>
+                  <!-- copy three columns -->
+                  <tr>
+                    <td valign="top" bgcolor="#F5F0E0" align="center" style="padding-top:50px;">
+                      <table cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                          <tr>
+                            <td align="center">
+                              <p class="headline-26" style="margin:0px;font-size: 26px; margin-bottom:30px;font-weight:bold;color:#414141;">PRODUITS</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#F5F0E0" align="center" height="" style="padding-left:15px;padding-right:15px;">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="stack-column-center" width="33.33%" style="padding-left:15px;padding-right:15px;">
+                              <table role="presentation" cellspacing="0" cellpadding="30" border="0">
+                                <tbody>
+                                  <tr>
+                                    <td style="padding: 0px; text-align: center;">
+                                     <a href="https://www.allianz.mg/Particuliers/assurer-mes-biens.html"> <img src="dist/assets/img/auto-icon.png" alt="Assurance auto"></a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style="font-family: sans-serif; font-size: 14px; line-height: 20px; color: #414141; padding: 0px 0px 21px; text-align: center;"
+                                      class="center-on-narrow">
+                                      <p style="margin: 0;line-height:20px; margin-top:20px;text-align: center">L' Assurance Auto d'Allianz vous protège en cas d'accident routier, que vous soyez à l'origine [...]<br/>
+                                          <a href="https://www.allianz.mg/Particuliers/assurer-mes-biens.html"  style="color:#006192;font-weight:bold; font-size:12px;letter-spacing:1px;"> ›voir plus</a></p> 
+                                      
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                            <td class="stack-column-center" width="33.33%" style="padding-left:15px;padding-right:15px;">
+                              <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                  <tr>
+                                    <td style="padding: 0px; text-align: center;">
+                                        <a href="https://www.allianz.mg/Particuliers/assurer-mes-biens.html#Assurance-multirisque-habitation"><img src="dist/assets/img/house-icon.png" alt="Habitation"></a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style="font-family: sans-serif; font-size: 14px; line-height: 20px; color: #414141; padding: 0 0px 21px; text-align: center;"
+                                      class="center-on-narrow">
+                                      <p style="margin: 0;line-height:20px; margin-top:20px;">L'assurance Multirisque d'Allianz offre une large gamme de garanties pour prévenir et se prémunir des sinistres [...]<br/>
+                                       <a href="https://www.allianz.mg/Particuliers/assurer-mes-biens.html#Assurance-multirisque-habitation"  style="color:#006192;font-weight:bold; font-size:12px;letter-spacing:1px;"> ›voir plus</a></p>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                            <td class="stack-column-center" width="33.33%" style="padding-left:15px;padding-right:15px;">
+                              <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                  <tr>
+                                    <td style="padding: 0px; text-align: center;">
+                                     <a href="https://www.allianz.mg/Particuliers/me-proteger-moi-et-mes-proches.html#Assurance-voyage"> <img src="dist/assets/img/heart-icon.png" alt="Voyage"></a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style="font-family: sans-serif; font-size: 14px; line-height: 20px; color: #414141; padding: 0 0px 21px; text-align: center;"
+                                      class="center-on-narrow">
+                                      <p style="margin: 0;line-height:20px; margin-top:20px;">L'assurance voyage d'Allianz vous donne accès à une couverture médicale optimale et des garanties [...] <br/>
+                                       <a href="https://www.allianz.mg/Particuliers/me-proteger-moi-et-mes-proches.html#Assurance-voyage"  style="color:#006192;font-weight:bold; font-size:12px;letter-spacing:1px;"> ›voir plus</a></p>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td  style="padding-left:16px;padding-right:16px;">
+                      <table class="table-button space-mobile-40" role="presentation" style="margin: auto;" cellspacing="0" cellpadding="0" border="0" align="center">
+                        <tbody>
+                          <tr>
+                            <td style="border-radius: 3px; background: #007ab3; text-align: center;" class="button-td">
+                              <a href="https://www.allianz.mg/" style="background: #007ab3; border: 15px solid #007ab3; font-family:'Arial',sans-serif;letter-spacing:2px !important;  font-size: 13px; line-height:1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: normal;"
+                                class="button-a mobile-line-height">
+                                <span style="color:#ffffff;letter-spacing:2px !important;font-weight:bold;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;VOIR NOS AUTRES PRODUITS&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- copy three columns -->
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <!--Stage1_add-->
+
+
+           <!-- copy illustrator-->
+            <tr>
+            <td class="">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+                <tr>
+                  <td class="" bgcolor="#ffffff" align="center">
+                   <a href="https://www.google.com/maps/place/Le+Gourmet/@-18.8844674,47.5237583,18.5z/data=!4m5!3m4!1s0x21f081f7a8c88749:0x47dc1cdbaa5bf3a5!8m2!3d-18.884622!4d47.5243715?hl=fr"> <img src="dist/assets/img/sensation.jpg" width="600" height=""
+                      alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #414141; margin: auto;"
+                      class="g-img"></a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- copy illustrator-->
+    
+          <!-- product module 1-->
+          <tr class="product-module-1">
+            <td>
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+                <tbody>
+                  <tr bgcolor="#C2E8E7">
+                      <td valign="top" class="on-mobile-full padding-bottom-mobile" bgcolor="#C2E8E7" align="left" style="height: 259px !important;">
+                      <p style="margin-top:38px; font-size: 16px !important;margin-left:20px;color:#414141;font-weight:bold;">Tout ce qu'il faut savoir sur l'assurance transport</p>
+                      <p class="" style=" font-size:14px;line-height: 20px;margin-left:20px;margin-right:20px;margin-bottom: 23px;">
+                        La faculté terrestre, ferroviaire, aérienne ou maritime, couramment appelée assurance transport, [...]
+                      </p>
+                      <a style="font-size:12px !important;letter-spacing:1px;margin-left:20px; font-weight:bold;padding-bottom:32px;" class="read-more" href="https://www.allianz.mg/presse-et-medias/nl-01-2020/assurance---transport.html">
+                   
+                        <span style="vertical-align:middle !important;color:#006192;">
+                          <font style="color:#006192;font-weight:bold; font-size:12px;letter-spacing:1px;" size="1">
+                            › LIRE L'ARTICLE
+                          </font>
+                        </span>
+                      </a>
+                    </td>
+                    <td class="on-mobile-full" bgcolor="#ffffff" style="width: 359px;" align="center" background="dist/assets/img/assurance_transport.jpg" style="height: 259px !important;;">
+                    
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr class="product-module-1">
+            <td valign="top">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+                <tr bgcolor="#D7CDDF">
+                    <td class="col-6 no-padding-top-bottom" style="padding-left:0px !important;width: 274px;" bgcolor="#D7CDDF" align="center" background="dist/assets/img/assurance_retraite.jpg" style="height: 238px !important;;">
+                    
+                  </td>
+                  <td class="on-mobile-full padding-bottom-mobile" valign="top" bgcolor="#D7CDDF" style=" height: 238px !important;; " align="left">
+                    <p style="margin-top:40px;margin-left:20px;font-size: 16px !important; color:#414141;font-weight:bold;">Allianz Madagascar vous explique l'Assurance Retraite
+                      <br> </p>
+                    <p class="small" style="margin-left:20px;margin-right:20px;font-size:14px;line-height: 20px;margin-bottom:23px;">
+                      La retraite est un stade important de la vie pour chaque individu.La sortie de la vie active est souvent un bouleversement [...]
+                    </p>
+                    <a style="letter-spacing:1px;font-weight:bold;margin-left:20px; font-size:12px !important;margin-bottom:32px; " class="read-more" href="https://www.allianz.mg/presse-et-medias/nl-01-2020/assurance-retraite.html">
+
+                      <span style="color:#006192;">
+                        <font style="color:#006192;font-weight:bold; font-size:12px;letter-spacing:1px;" size="1">
+                          › LIRE L'ARTICLE
+                        </font>
+                      </span>
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- product module 1-->
+
+           <!-- copy align left-->
+      <tr>
+            <td valign="top" class=" copy-left" bgcolor="#ffffff" align="left" style="padding: 60px 20px;">
+              <p class="headline no-padding-all-lr" style="margin:0px;font-size:20px; color:#5A3982; font-weight:bold; text-align: left;line-height: 17px; ">DEAR JOE EXAMPLE,</p>
+              <p class="small no-padding-all-lr" style="margin-bottom:25px; font-size:14px; line-height: 20px;">Yes, we return. Next March 26 will be our Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              <p class="no-padding-all-lr" style="margin:0px;color:#414141;font-weight:bold; font-size:14px; ">Thank you for joining our team!</p>
+            </td>
+          </tr>
+          <!-- copy align left-->
+    
+          <!-- full image -->
+          <tr>
+            <td class="">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+                <tr>
+                  <td class="" bgcolor="#ffffff" align="center">
+                    <img src="dist/assets/img/GettyImages-631125005.jpg" width="600" height=""
+                      alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #414141; margin: auto;"
+                      class="g-img">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+         
+      <tr>
+        <td bgcolor="#ffffff" align="center">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td align="center" style="padding:16px 20px;">
+                <a href="https://web.facebook.com/allianzmadagascar/?_rdc=1&_rdr" style="padding: 0px 5px;">
+                  <img src="dist/assets/img/social/ff.png" alt="Google" width="24" height="24">
+                </a>
+                <a href="https://www.youtube.com/channel/UC-BGGiqU-U04D6nvJTH5I4w" style="padding: 0px 5px;">
+                  <img src="dist/assets/img/social/yt.png" alt="Facebook" width="24" height="24">
+                </a>
+                <a href="https://www.linkedin.com/company/allianz-madagascar" style="padding: 0px 5px;">
+                  <img src="dist/assets/img/social/link.png" alt="Email" width="24" height="24">
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- social media -->
+
+      <!-- footer(long version) -->
+      <tr bgcolor="#F4F2F3">
+        <td align="center">
+          <table cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+              <tr>
+                <td align="center">
+                  <p style="font-size:11px;color:#767676; margin-top:40px; margin-bottom: 40px; line-height:18px;text-align: justify; padding: 0px 20px 0 20px">
+                    Document à caractère publicitaire. Vos informations personnelles sont importantes pour nous : elles nous aident à mieux vous connaître afin de vous fournir les services d'Allianz et, sous réserve de vos choix, de vous informer des offres privilégiées d'Allianz. Ces informations pourront faire l’objet d’une prise de décision automatisée visant à évaluer vos préférences ou centres d’intérêts personnels. Vous gardez bien sûr tout loisir de nous demander leur communication, leur modification, leur rectification, leur suppression, en demander la portabilité ou de vous opposer à leur utilisation. Pour cela, il vous suffit de cliquer sur le lien ci-dessous pour vous désabonner de cette newsletter.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr class="footer-bottom">
+        <td bgcolor="#ffffff" align="center">
+          <table width="100%"  cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+
+              <tr> 
+                <td class="on-mobile-full" align="left" >
+                    <img class="mobile-visible" src="dist/assets/img/social/allianz-footer.png">
+                  <p style="font-size:12px;color:#767676; margin-left:16px;margin-bottom:20px;margin-top:20px">
+                    <b>© Allianz 2020</b>
+                    <a style="color:#767676; margin-left: 10px;" href="https://www.allianz.mg/">www.Allianz.mg</a>
+                  </p>
+                </td>
+                
+                <td class="on-mobile-full bottom-end"  align="right">
+                  <p style="font-size:12px;letter-spacing: 0.04rem;color: #006192;margin-right:16px;margin-bottom:20px;margin-top:20px"><strong><img style="vertical-align:middle; margin-top: -1px;" src="dist/assets/img/social/icon_call_phone_out2_24px.png"></strong>
+                    <a style="font-size: 12px !important; color: #006192;" href="tel:020 22 579 00">
+                      <strong>020 22 579 00</strong>
+                    </a>
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- footer(long version) -->
+
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="canspamBarWrapper" style="background-color:#f3f3f3; border-top:1px solid #f3f3f3;"><tr><td align="center" valign="top" style="padding-top:20px; padding-bottom:20px;"><table border="0" cellpadding="0" cellspacing="0" id="canspamBar"><tr><td align="center" valign="top" style="color:#606060; font-family:Helvetica, Arial, sans-serif; font-size:11px; line-height:150%; padding-right:20px; padding-bottom:5px; padding-left:20px; text-align:center;">
+                                                Cet e-mail est envoyé à <a href="mailto:*|EMAIL|*" target="_blank" style="color:#404040 !important;">*|EMAIL|*</a><br /><a href="*|ABOUT_LIST|*" target="_blank" style="color:#404040 !important;"><em>Pourquoi est-ce que j'ai reçu cet e-mail?</em></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="*|UNSUB|*" style="color:#404040 !important;">je souhaite me désinscrire de cette liste</a>&nbsp;&nbsp;&nbsp;&nbsp;<br><a href="*|UPDATE_PROFILE|*" style="color:#404040 !important;">Mettre à jour les préférences de l'abonnement</a><br />
+                                                *|LIST:ADDRESSLINE|*
+                                                <br /><br /></td></tr></table></td></tr></table>
+    <!-- copy align center-->
+  </center>
+</body>
+</html>
